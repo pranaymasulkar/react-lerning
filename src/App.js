@@ -11,6 +11,7 @@ import Emplye from './Components/Emplye';
 import ToogleFUnctionality from './Components/ToogleFUnctionality';
 import Person from './Components/Person';
 import {Container, Table} from 'react-bootstrap'
+import ForData from './Components/ForData';
  function App() {
   // emplye = [
   //   {
@@ -33,22 +34,22 @@ import {Container, Table} from 'react-bootstrap'
   //   },
   // ];
 
-  const [data, setData]= useState([]);
+  // const [data, setData]= useState([]);
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
 
-  const fetchData = async () => {
-    try{
-      const response = await fetch("https://jsonplaceholder.typicode.com/users")
-      const jsonData = await response.json();
-      setData(jsonData);
+  // const fetchData = async () => {
+  //   try{
+  //     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+  //     const jsonData = await response.json();
+  //     setData(jsonData);
 
-    }catch (error) {
-      console.log(error)
-    }
-  }
+  //   }catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
   // const personData ={
@@ -63,11 +64,11 @@ import {Container, Table} from 'react-bootstrap'
     <div className="App">
       <Container className='p-5'>
 
-      <header className="App-header">
-        <ToogleFUnctionality/>
-        <DemoClass/>
-          <div > 
-            {/* <Table bordered hover size="sm" className='text-white'>
+      <header >
+        {/* <ToogleFUnctionality/> */}
+        {/* <DemoClass/> */}
+            {/*  <div > 
+         <Table bordered hover size="sm" className='text-white'>
               {data.map((item) => (
                 <tbody>
 
@@ -79,8 +80,8 @@ import {Container, Table} from 'react-bootstrap'
                   </tr>
                 </tbody>
               ))}
-          </Table>   */}
-        </div>
+          </Table>  
+        </div> */}
         {/* <Emplye/>
           <Person {...personData}/>
           <DemoTwo/>
@@ -89,6 +90,10 @@ import {Container, Table} from 'react-bootstrap'
         <HookCounter/>
       <ClassCounterExample/> */}
         
+      <div>
+        <ForData/>
+      </div>
+      
       </header>
       </Container>
       
