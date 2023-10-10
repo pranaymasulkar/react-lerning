@@ -20,6 +20,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import EmployeEdit from "./crud/EmployeEdit";
 import EmployeAdd from "./crud/EmployeAdd";
 import DemoUsest from "./DemoUsest";
+import HookFirst from "./hooks/HookFirst";
 
 function App() {
   // emplye = [
@@ -109,6 +110,7 @@ function App() {
           <div>{/* <Friday14july/> */}</div>
           <div>{/* <ForData/> */}</div>
         </header>
+        <HookFirst/> 
       </Container>
     </div>
   );
